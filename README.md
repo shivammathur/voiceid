@@ -18,16 +18,19 @@ For the GUI:
   1. `mplayer`
   1. `MplayerCtrl`
 
-Tested on Ubuntu 12.04/12.10
+Tested on Ubuntu 16.04
 
 Setup in Ubuntu:
 
 ```
-  $ sudo apt-get install python2.7 python-wxgtk2.8 openjdk-7-jdk gstreamer0.10-plugins-base \
-      gstreamer0.10-plugins-good gstreamer0.10-plugins-bad gstreamer0.10-plugins-ugly \
-      gstreamer-tools sox mplayer python-setuptools
+  $ sudo add-apt-repository ppa:nilarimogard/webupd8
+  $ sudo add-apt-repository ppa:openjdk-r/ppa  
+  $ sudo apt-get update
+  $ sudo apt-get install python-wxgtk2.8 openjdk-7-jdk ubuntu-restricted-extras gstreamer0.10-plugins-base \
+      gstreamer0.10-plugins-good \
+      gstreamer-tools sox mplayer python-setuptools git
   $ sudo easy_install MplayerCtrl
-  $ svn checkout http://voiceid.googlecode.com/svn/trunk voiceid
+  $ git clone https://github.com/BackupGGCode/voiceid
   $ cd voiceid
   $ sudo python setup.py install
 
